@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HiCog, HiSupport, HiLightningBolt, HiShieldCheck } from 'react-icons/hi';
+import WhatWeOffer from '../components/sections/WhatWeOffer';
 
 const ServicesPage = () => {
   const services = [
@@ -33,10 +34,10 @@ const ServicesPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our Services</h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive solutions for all your industrial needs
             </p>
           </motion.div>
@@ -58,6 +59,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
+      <WhatWeOffer />
     </div>
   );
 };

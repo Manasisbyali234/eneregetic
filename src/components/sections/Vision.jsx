@@ -25,7 +25,7 @@ const Vision = () => {
   return (
     <motion.section 
       id="vision" 
-      className="py-24 bg-slate-50 relative overflow-hidden"
+      className="py-16 md:py-24 bg-slate-50 relative overflow-hidden"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
@@ -41,21 +41,21 @@ const Vision = () => {
           <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
         </motion.div>
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div variants={fadeInUp}>
-            <div className="bg-white p-10 rounded-3xl shadow-2xl shadow-blue-900/5 border border-white relative overflow-hidden group">
+            <div className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl shadow-blue-900/5 border border-white relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform duration-500">
                 <HiEye className="text-9xl text-primary" />
               </div>
               <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary text-4xl">
                 <HiEye />
               </div>
-              <h3 className="text-3xl font-bold mb-6 text-gray-900">Leading the Future</h3>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                To be the most trusted and innovative partner in industrial solutions, driving sustainable growth and operational excellence across industries worldwide.
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Leading the Future</h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+                We envision a world where industries operate at peak efficiency with low environmental impact, where technology and sustainability coalesce seamlessly. 
               </p>
               <p className="text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6">
-                "We envision a future where every industry operates at peak efficiency with minimal environmental impact, powered by cutting-edge technology."
+              "Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions. We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage."
               </p>
             </div>
           </motion.div>

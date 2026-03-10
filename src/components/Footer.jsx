@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-[#0f172a] text-white pt-20 pb-10 overflow-hidden relative"
+      className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 overflow-hidden relative"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
@@ -42,7 +42,7 @@ const Footer = () => {
               <img src="/download.png" alt="Energethics" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-gray-400 leading-relaxed text-sm">
-              Energy Efficiency at its Ethical Best. Providing world-class industrial engineering solutions with a focus on sustainability and excellence.
+              <strong>Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions.</strong> We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage.
             </p>
             <div className="flex gap-4">
               {[
@@ -151,9 +151,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Energethics Engineering Solutions Pvt Ltd. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-gray-500">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+            <button className="hover:text-primary transition-colors">Privacy Policy</button>
+            <button className="hover:text-primary transition-colors">Terms of Service</button>
+            <button className="hover:text-primary transition-colors">Cookie Policy</button>
           </div>
         </motion.div>
       </div>

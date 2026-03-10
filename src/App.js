@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import VisionPage from './pages/VisionPage';
 import MissionPage from './pages/MissionPage';
+import CompanyProfilePage from './pages/CompanyProfilePage';
 import ContactPage from './pages/ContactPage';
 import KaeserPage from './pages/KaeserPage';
 import ThermaxPage from './pages/ThermaxPage';
@@ -34,6 +35,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/vision" element={<VisionPage />} />
             <Route path="/mission" element={<MissionPage />} />
+            <Route path="/company-profile" element={<CompanyProfilePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/kaeser" element={<KaeserPage />} />
             <Route path="/thermax" element={<ThermaxPage />} />

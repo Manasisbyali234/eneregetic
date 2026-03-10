@@ -7,6 +7,7 @@ import { navLinkHover } from '../utils/animations';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -20,6 +21,7 @@ const Navbar = () => {
   // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
+    setMobileActiveDropdown(null);
   }, [location]);
 
   const navLinks = [
@@ -29,7 +31,7 @@ const Navbar = () => {
       dropdown: [
         { name: 'Our Vision', href: '/vision' },
         { name: 'Our Mission', href: '/mission' },
-        { name: 'Company Profile', href: '/#about' }
+        { name: 'Company Profile', href: '/company-profile' }
       ]
     },
     { 
@@ -52,10 +54,6 @@ const Navbar = () => {
     ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' 
     : 'bg-transparent py-5';
   
-  const textColor = !isHome || scrolled 
-    ? 'text-gray-900' 
-    : 'text-white';
-
   const linkHoverColor = !isHome || scrolled
     ? 'text-gray-600 hover:text-primary'
     : 'text-gray-200 hover:text-white';
@@ -73,7 +71,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="relative overflow-hidden transition-transform group-hover:scale-105">
-              <img src="/download.png" alt="Energethics" className="h-14 w-auto" />
+              <img src="/download.png" alt="Energethics" className="h-10 md:h-14 w-auto" />
             </div>
           </Link>
 
@@ -183,40 +181,64 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto py-8 px-6 space-y-6">
+            <div className="flex-1 overflow-y-auto py-4 px-6 space-y-4">
               {navLinks.map((link, idx) => (
-                <div key={idx} className="space-y-4">
+                <div key={idx} className="space-y-2">
                   {link.dropdown ? (
-                    <>
-                      <p className="text-xs font-bold text-primary uppercase tracking-widest">{link.name}</p>
-                      <div className="grid grid-cols-1 gap-4">
-                        {link.dropdown.map((item, i) => (
-                          <Link
-                            key={i}
-                            to={item.href.startsWith('/#') ? '/' : item.href}
-                            className="text-xl font-bold text-gray-900 hover:text-primary transition-colors"
+                    <div className="space-y-2">
+                      <button 
+                        onClick={() => setMobileActiveDropdown(mobileActiveDropdown === link.name ? null : link.name)}
+                        className="flex items-center justify-between w-full text-left"
+                      >
+                        <span className="text-xl font-bold text-gray-900">{link.name}</span>
+                        <HiChevronDown className={`text-2xl text-gray-500 transition-transform duration-300 ${mobileActiveDropdown === link.name ? 'rotate-180' : ''}`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {mobileActiveDropdown === link.name && (
+                          <motion.div 
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden pl-4 space-y-3 border-l-2 border-primary/20"
                           >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </>
+                            {link.dropdown.map((item, i) => (
+                              <Link
+                                key={i}
+                                to={item.href.startsWith('/#') ? '/' : item.href}
+                                onClick={() => {
+                                  if (item.href.includes('#')) {
+                                    window.location.hash = item.href.split('#')[1];
+                                  }
+                                  setIsOpen(false);
+                                }}
+                                className="block text-lg font-medium text-gray-600 hover:text-primary transition-colors py-1"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   ) : (
                     <a
                       href={link.href}
-                      className="text-2xl font-bold text-gray-900 hover:text-primary transition-colors"
+                      className="text-xl font-bold text-gray-900 hover:text-primary transition-colors block"
                     >
                       {link.name}
                     </a>
                   )}
                 </div>
               ))}
-              <Link 
-                to="/contact"
-                className="block w-full text-center py-4 bg-primary text-white rounded-2xl font-bold text-lg shadow-xl shadow-primary/20"
-              >
-                Get In Touch
-              </Link>
+              <div className="pt-4">
+                <Link 
+                  to="/contact"
+                  className="block w-full text-center py-3.5 bg-primary text-white rounded-2xl font-bold text-base shadow-xl shadow-primary/20"
+                >
+                  Get In Touch
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

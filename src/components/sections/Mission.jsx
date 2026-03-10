@@ -29,7 +29,7 @@ const Mission = () => {
   return (
     <motion.section 
       id="mission" 
-      className="py-24 bg-white relative"
+      className="py-16 md:py-24 bg-white relative"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
@@ -40,10 +40,13 @@ const Mission = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-green-600">Mission</span>
           </h2>
-          <div className="w-20 h-1.5 bg-green-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1.5 bg-green-600 mx-auto rounded-full mb-8"></div>
+          <p className="max-w-4xl mx-auto text-base md:text-lg text-gray-600 leading-relaxed">
+            We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage. Our mission is to empower industries to innovate and optimize by delivering robust engineering solutions that maximize efficiency, reliability, and sustainability.
+          </p>
         </motion.div>
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div variants={staggerContainer} className="space-y-6 order-2 lg:order-1">
             {points.map((point, idx) => (
               <motion.div
@@ -68,12 +71,12 @@ const Mission = () => {
           >
             <div className="relative">
               <div className="absolute -inset-4 bg-green-100/50 rounded-[2rem] blur-2xl"></div>
-              <div className="relative bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100">
+              <div className="relative bg-white p-6 md:p-10 rounded-[2rem] shadow-xl border border-slate-100">
                 <div className="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mb-8 text-white text-4xl shadow-lg shadow-green-200">
                   <FaBullseye />
                 </div>
-                <h3 className="text-3xl font-bold mb-6 text-gray-900">Our Commitment</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Our Commitment</h3>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
                   To empower industries with reliable, efficient, and sustainable solutions that optimize performance, reduce costs, and enhance productivity.
                 </p>
                 

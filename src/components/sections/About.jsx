@@ -29,7 +29,7 @@ const About = () => {
   return (
     <motion.section 
       id="about" 
-      className="py-32 bg-white relative overflow-hidden"
+      className="py-16 md:py-32 bg-white relative overflow-hidden"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
@@ -38,27 +38,30 @@ const About = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <motion.div variants={fadeInUp}>
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Who We Are</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
               Engineering solutions with <span className="text-primary">50+ years</span> of expertise.
             </h3>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              Energethics Engineering Solutions, based in Bengaluru, was founded by industry veterans to bridge the gap between complex industrial needs and efficient engineering solutions.
+              <strong>Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions.</strong> We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage.
+            </p>
+            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              Established with a vision to push the boundaries of engineering, our organization excels at transforming complex industrial challenges into practical, sustainable, and innovative solutions.
             </p>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-              We focus on the manufacturing sector, supplying high-quality products that improve reliability and operational performance across Karnataka.
+              We bring together decades of experience across multiple sectors, leveraging cutting-edge technology, expert knowledge, and strategic insight to help industries achieve operational excellence and long-term growth.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
               {[
                 { label: 'Authorized Partner', sub: 'Global Brands' },
                 { label: 'Pan-Karnataka', sub: 'Service Network' }
               ].map((stat, i) => (
-                <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                  <p className="text-2xl font-bold text-slate-900">{stat.label}</p>
-                  <p className="text-sm text-slate-500">{stat.sub}</p>
+                <div key={i} className="bg-slate-50 p-4 md:p-6 rounded-2xl border border-slate-100">
+                  <p className="text-lg md:text-2xl font-bold text-slate-900">{stat.label}</p>
+                  <p className="text-xs md:text-sm text-slate-500">{stat.sub}</p>
                 </div>
               ))}
             </div>

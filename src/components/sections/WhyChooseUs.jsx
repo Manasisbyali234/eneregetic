@@ -2,11 +2,50 @@ import React from 'react';
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Energethics?</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        </div>
+
+        <div className="mb-8 md:mb-12 bg-white p-6 md:p-8 rounded-lg shadow-md">
+          <p className="text-gray-700 leading-relaxed mb-6">
+            We differentiate ourselves through a client-centric approach:
+          </p>
+          <ul className="space-y-4">
+            <li className="flex items-start">
+              <span className="text-primary font-bold mr-4">•</span>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-1">Tailored Solutions for Maximum Impact</h4>
+                <p className="text-gray-600">Every solution is crafted to meet the precise needs of your operations.</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary font-bold mr-4">•</span>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-1">End-to-End Support</h4>
+                <p className="text-gray-600">From concept to maintenance, we are your partner across all stages.</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary font-bold mr-4">•</span>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-1">Sustainable Innovation</h4>
+                <p className="text-gray-600">Integrating technologies that enhance productivity while reducing environmental footprint.</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary font-bold mr-4">•</span>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-1">Proven Expertise</h4>
+                <p className="text-gray-600">Backed by a legacy of successful projects and satisfied partners globally.</p>
+              </div>
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-8 italic border-l-4 border-primary pl-6">
+            At Energethics, we don't just provide engineering solutions—we co-create value and growth opportunities for every client we collaborate with.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

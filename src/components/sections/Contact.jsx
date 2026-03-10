@@ -44,7 +44,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section id="contact" className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           ref={ref}
@@ -66,7 +66,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="bg-white p-8 rounded-xl shadow-lg"
+            className="bg-white p-6 md:p-8 rounded-xl shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <motion.div
@@ -197,6 +197,7 @@ const Contact = () => {
         className="mt-16 w-full"
       >
         <iframe
+          title="Energethics Office Location"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62216.04651171904!2d77.541309!3d12.939639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fdedd0f1f8b%3A0x82d07b5e9a39ad66!2sEnergethics%20Engineering%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sus!4v1773048939231!5m2!1sen!2sus"
           width="100%"
           height="450"

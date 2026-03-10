@@ -4,7 +4,7 @@ import { FaCog, FaWrench, FaBolt, FaChevronRight } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen min-h-[700px] flex items-center text-white overflow-hidden">
+    <section id="home" className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center text-white overflow-hidden">
       {/* Floating Background Icons */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[15%] left-[10%] opacity-20 hidden md:block">
@@ -73,7 +73,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl mb-12 text-gray-300 leading-relaxed max-w-2xl"
           >
-            Optimize your operations with world-class, energy-efficient solutions. 
+            Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions. 
             Trusted partner of <span className="text-white font-semibold underline decoration-primary underline-offset-4">Kaeser</span> and <span className="text-white font-semibold underline decoration-primary underline-offset-4">Thermax</span>.
           </motion.p>
           

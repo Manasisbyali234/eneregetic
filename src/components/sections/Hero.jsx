@@ -4,7 +4,7 @@ import { FaCog, FaWrench, FaBolt, FaChevronRight } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center text-white overflow-hidden">
+    <section id="home" className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center pt-24 md:pt-0 text-white overflow-hidden">
       {/* Floating Background Icons */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[15%] left-[10%] opacity-20 hidden md:block">

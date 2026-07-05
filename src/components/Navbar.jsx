@@ -18,10 +18,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close mobile menu on route change and scroll to top
   useEffect(() => {
     setIsOpen(false);
     setMobileActiveDropdown(null);
+    window.scrollTo(0, 0);
   }, [location]);
 
   const navLinks = [

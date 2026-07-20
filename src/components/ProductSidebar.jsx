@@ -74,12 +74,11 @@ const ProductSidebar = () => {
                     {item.subItems.map((subItem, subIndex) => (
                       <div key={subIndex}>
                         <div className="border-t border-gray-100 mx-4"></div>
-                        <a
-                          href="#"
-                          className="block py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200"
+                        <button
+                          className="block w-full text-left py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200"
                         >
                           {subItem}
-                        </a>
+                        </button>
                       </div>
                     ))}
                   </div>

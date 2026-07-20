@@ -37,9 +37,9 @@ const ThermaxSidebar = () => {
                 {subItems.map((item, i) => (
                   <div key={i}>
                     <div className="border-t border-gray-100 mx-4"></div>
-                    <a href="#" className="block py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
+                    <button className="block w-full text-left py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
                       {item}
-                    </a>
+                    </button>
                   </div>
                 ))}
 
@@ -70,9 +70,9 @@ const ThermaxSidebar = () => {
                   {tfhItems.map((item, i) => (
                     <div key={i}>
                       <div className="border-t border-gray-100 mx-4"></div>
-                      <a href="#" className="block py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
+                      <button className="block w-full text-left py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
                         {item}
-                      </a>
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -103,9 +103,9 @@ const ThermaxSidebar = () => {
                   {hwItems.map((item, i) => (
                     <div key={i}>
                       <div className="border-t border-gray-100 mx-4"></div>
-                      <a href="#" className="block py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
+                      <button className="block w-full text-left py-3 px-4 pl-6 text-[14px] text-orange-500 hover:bg-orange-50 transition-colors duration-200">
                         {item}
-                      </a>
+                      </button>
                     </div>
                   ))}
                 </div>

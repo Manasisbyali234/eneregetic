@@ -52,7 +52,7 @@ const InfiniteCarousel = ({ onOpen }) => {
                   alt={`Page ${pageIdx + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 bg-white rounded-full p-3 shadow-lg">
                     <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -90,11 +90,10 @@ const KaeserHero = () => {
           }}
           className="absolute inset-0 scale-110"
         />
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/50 to-transparent flex items-center">
           <div className="pl-6 md:pl-16">
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-4">Kaeser</h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-xl">World-renowned Compressed Air Systems</p>
+            <p className="text-lg md:text-xl text-orange-100 max-w-xl">World-renowned Compressed Air Systems</p>
           </div>
         </div>
       </div>
@@ -177,12 +176,12 @@ const KaeserPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/92 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-white/95 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={() => setLightboxIndex(null)}
           >
             <button
               onClick={e => { e.stopPropagation(); lbPrev(); }}
-              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-primary text-white rounded-full p-3 transition-all z-10"
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-orange-100 hover:bg-primary text-slate-700 hover:text-white rounded-full p-3 transition-all z-10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -202,15 +201,15 @@ const KaeserPage = () => {
               onClick={e => e.stopPropagation()}
             />
 
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 text-white text-sm font-semibold px-5 py-2 rounded-full">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-100 text-slate-700 text-sm font-semibold px-5 py-2 rounded-full shadow">
               <span className="text-primary">{lightboxIndex + 1}</span>
-              <span className="text-white/40 mx-1">/</span>
+              <span className="text-slate-400 mx-1">/</span>
               {totalPages}
             </div>
 
             <button
               onClick={e => { e.stopPropagation(); lbNext(); }}
-              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-primary text-white rounded-full p-3 transition-all z-10"
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-orange-100 hover:bg-primary text-slate-700 hover:text-white rounded-full p-3 transition-all z-10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -219,7 +218,7 @@ const KaeserPage = () => {
 
             <button
               onClick={() => setLightboxIndex(null)}
-              className="absolute top-5 right-5 bg-white/10 hover:bg-red-500 text-white rounded-full p-2.5 transition-all"
+              className="absolute top-5 right-5 bg-orange-100 hover:bg-red-500 text-slate-700 hover:text-white rounded-full p-2.5 transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

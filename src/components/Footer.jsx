@@ -23,13 +23,13 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 overflow-hidden relative"
+      className="bg-orange-50 text-slate-800 pt-12 md:pt-20 pb-8 md:pb-10 overflow-hidden relative"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -39,9 +39,9 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="flex items-center space-x-2">
-              <img src="/download.png" alt="Energethics" className="h-12 w-auto brightness-0 invert" />
+              <img src="/download.png" alt="Energethics" className="h-12 w-auto" />
             </div>
-            <p className="text-gray-400 leading-relaxed text-sm">
+            <p className="text-slate-600 leading-relaxed text-sm">
               <strong>Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions.</strong> We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage.
             </p>
             <div className="flex gap-4">
@@ -57,7 +57,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -3, color: '#f97316' }}
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 transition-all border border-gray-700 hover:border-primary/50"
+                  className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-slate-500 transition-all border border-orange-200 hover:border-primary/50"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -70,14 +70,14 @@ const Footer = () => {
           <motion.div
             variants={fadeInUp}
           >
-            <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
+            <h3 className="text-slate-800 font-bold text-lg mb-6 relative inline-block">
               Quick Links
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
             </h3>
             <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-primary hover:translate-x-2 transition-all inline-block text-sm">
+                  <a href={link.href} className="text-slate-500 hover:text-primary hover:translate-x-2 transition-all inline-block text-sm">
                     {link.name}
                   </a>
                 </li>
@@ -89,13 +89,13 @@ const Footer = () => {
           <motion.div
             variants={fadeInUp}
           >
-            <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
+            <h3 className="text-slate-800 font-bold text-lg mb-6 relative inline-block">
               Our Solutions
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
             </h3>
             <ul className="space-y-4">
               {solutions.map((item, index) => (
-                <li key={index} className="flex items-center text-gray-400 text-sm group cursor-pointer hover:text-primary transition-colors">
+                <li key={index} className="flex items-center text-slate-500 text-sm group cursor-pointer hover:text-primary transition-colors">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mr-3 group-hover:bg-primary transition-colors"></span>
                   {item}
                 </li>
@@ -108,7 +108,7 @@ const Footer = () => {
             variants={fadeInUp}
             className="space-y-6"
           >
-            <h3 className="text-white font-bold text-lg mb-6 relative inline-block">
+            <h3 className="text-slate-800 font-bold text-lg mb-6 relative inline-block">
               Get In Touch
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full"></span>
             </h3>
@@ -116,15 +116,15 @@ const Footer = () => {
               <div className="flex items-start space-x-3 group">
                 <FaPhoneAlt className="text-primary mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-white font-medium">Call Us</p>
-                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors">+91 6364463656/62/63</p>
+                  <p className="text-slate-700 font-medium">Call Us</p>
+                  <p className="text-slate-500 group-hover:text-slate-600 transition-colors">+91 6364463656/62/63</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 group">
                 <FaEnvelope className="text-primary mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-white font-medium">Email Support</p>
-                  <a href="mailto:sales@energethics.in" className="text-gray-400 group-hover:text-primary transition-colors">
+                  <p className="text-slate-700 font-medium">Email Support</p>
+                  <a href="mailto:sales@energethics.in" className="text-slate-500 group-hover:text-primary transition-colors">
                     sales@energethics.in
                   </a>
                 </div>
@@ -132,8 +132,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3 group">
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-white font-medium">Our Office</p>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-slate-700 font-medium">Our Office</p>
+                  <p className="text-slate-500 leading-relaxed">
                     No. 878, Kutadri, Ground Floor, 1st E Main Road, Girinagar Phase 2, Bangalore – 560085
                   </p>
                 </div>
@@ -145,12 +145,12 @@ const Footer = () => {
         {/* Footer Bottom Strip */}
         <motion.div 
           variants={fadeInUp}
-          className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="pt-8 border-t border-orange-200 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p className="text-gray-500 text-xs">
+          <p className="text-slate-400 text-xs">
             © {new Date().getFullYear()} Energethics Engineering Solutions Pvt Ltd. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-gray-500">
+          <div className="flex gap-6 text-xs text-slate-400">
             <button className="hover:text-primary transition-colors">Privacy Policy</button>
             <button className="hover:text-primary transition-colors">Terms of Service</button>
             <button className="hover:text-primary transition-colors">Cookie Policy</button>

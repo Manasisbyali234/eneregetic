@@ -42,7 +42,7 @@ const Mission = () => {
           </h2>
           <div className="w-20 h-1.5 bg-green-600 mx-auto rounded-full mb-8"></div>
           <p className="max-w-4xl mx-auto text-base md:text-lg text-gray-600 leading-relaxed">
-            We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage. Our mission is to empower industries to innovate and optimize by delivering robust engineering solutions that maximize efficiency, reliability, and sustainability.
+            To provide end-to-end industrial utility solutions through world-class products, engineering expertise, and exceptional customer service while building lasting relationships based on trust, quality, and continuous innovation.
           </p>
         </motion.div>
         
@@ -76,13 +76,16 @@ const Mission = () => {
                   <FaBullseye />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Our Commitment</h3>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
+                  At Energethics, every customer relationship is built on trust, integrity, and service excellence. We are committed to providing responsive support, reliable products, and engineered solutions that create measurable value for our customers' businesses.
+                </p>
                 <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
-                  To empower industries with reliable, efficient, and sustainable solutions that optimize performance, reduce costs, and enhance productivity.
+                  As industries continue to evolve, we remain focused on helping them achieve greater efficiency, sustainability, and operational excellence through innovative engineering and dependable partnerships.
                 </p>
                 
-                <div className="relative p-8 bg-slate-900 rounded-2xl overflow-hidden">
-                  <FaQuoteLeft className="absolute top-4 left-4 text-white/10 text-6xl" />
-                  <p className="relative z-10 text-white text-lg font-medium italic leading-relaxed">
+                <div className="relative p-8 bg-orange-50 rounded-2xl overflow-hidden border border-orange-100">
+                  <FaQuoteLeft className="absolute top-4 left-4 text-primary/10 text-6xl" />
+                  <p className="relative z-10 text-slate-700 text-lg font-medium italic leading-relaxed">
                     "Transforming industries through innovation, integrity, and excellence."
                   </p>
                   <div className="absolute bottom-0 right-0 w-24 h-24 bg-green-600/20 rounded-full -mr-12 -mb-12 blur-2xl"></div>

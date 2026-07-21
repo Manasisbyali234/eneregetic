@@ -6,29 +6,34 @@ import { fadeInUp, staggerContainer } from '../../utils/animations';
 const Values = () => {
   const values = [
     {
-      title: "Innovation",
-      desc: "Constantly redefining solutions through creativity and forward-thinking engineering practices.",
-      icon: <HiLightBulb className="text-3xl" />
-    },
-    {
-      title: "Reliability",
-      desc: "Ensuring our clients can trust every system and product we deliver.",
-      icon: <HiShieldCheck className="text-3xl" />
-    },
-    {
-      title: "Sustainability",
-      desc: "Designing solutions that respect the planet while optimizing industrial efficiency.",
-      icon: <HiGlobeAlt className="text-3xl" />
-    },
-    {
-      title: "Collaboration",
-      desc: "Working closely with stakeholders to achieve seamless implementation and lasting results.",
+      title: "Customer First",
+      desc: "We place our customers at the heart of every decision and strive to exceed their expectations.",
       icon: <HiUserGroup className="text-3xl" />
     },
     {
-      title: "Excellence",
-      desc: "Upholding the highest standards of technical performance, service quality, and client satisfaction.",
+      title: "Integrity",
+      desc: "We conduct business with honesty, transparency, and ethical responsibility.",
+      icon: <HiShieldCheck className="text-3xl" />
+    },
+    {
+      title: "Engineering Excellence",
+      desc: "We deliver technically sound, reliable, and innovative solutions that create lasting value.",
       icon: <HiStar className="text-3xl" />
+    },
+    {
+      title: "Quality",
+      desc: "We are committed to the highest standards in products, services, and project execution.",
+      icon: <HiGlobeAlt className="text-3xl" />
+    },
+    {
+      title: "Continuous Improvement",
+      desc: "We embrace learning, innovation, and continuous development to better serve our customers.",
+      icon: <HiLightBulb className="text-3xl" />
+    },
+    {
+      title: "Partnership",
+      desc: "We believe lasting success is built through strong relationships with customers, employees, suppliers, and technology partners.",
+      icon: <HiUserGroup className="text-3xl" />
     }
   ];
 
@@ -46,7 +51,7 @@ const Values = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeInUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-primary">Values</span>
+            Our <span className="text-primary">Core Values</span>
           </h2>
           <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
         </motion.div>

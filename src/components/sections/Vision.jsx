@@ -50,12 +50,9 @@ const Vision = () => {
               <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 text-primary text-4xl">
                 <HiEye />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Leading the Future</h3>
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
-                We envision a world where industries operate at peak efficiency with low environmental impact, where technology and sustainability coalesce seamlessly. 
-              </p>
-              <p className="text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6">
-              "Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions. We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage."
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Our Vision</h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                To become one of India's most trusted engineering solutions companies by delivering innovative, sustainable, and value-driven industrial utility solutions that empower industries to perform at their best.
               </p>
             </div>
           </motion.div>

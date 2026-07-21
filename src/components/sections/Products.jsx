@@ -76,7 +76,7 @@ const Products = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.4 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <motion.div 
                   className="absolute top-4 right-4 text-4xl"
                   whileHover={{ rotate: 15 }}

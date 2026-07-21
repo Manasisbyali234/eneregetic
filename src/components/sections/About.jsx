@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { HiEye, HiCheckCircle, HiStar } from 'react-icons/hi';
 import { FaRocket } from 'react-icons/fa';
 import { fadeInUp, staggerContainer } from '../../utils/animations';
+import TextReveal from '../TextReveal';
 
 const About = () => {
   const cards = [
@@ -42,7 +43,7 @@ const About = () => {
           <motion.div variants={fadeInUp}>
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Who We Are</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-              Engineering solutions with <span className="text-primary">50+ years</span> of expertise.
+              <TextReveal text="Engineering solutions with" /> <span className="text-primary"><TextReveal text="50+ years" /></span> <TextReveal text="of expertise." />
             </h3>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
               <strong>Energethics Engineering Solutions Pvt. Ltd. – Pioneering Reliable, Sustainable, and Industrially Transformative Solutions.</strong> We are committed to reshaping industries, empowering businesses, and delivering measurable excellence at every stage.
@@ -98,6 +99,34 @@ const About = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* About Us narrative */}
+        <motion.div variants={fadeInUp} className="mt-20 md:mt-28">
+          <div className="text-center mb-12">
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">About Us</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+              <TextReveal text="Engineering Excellence. Trusted Partnerships." /> <span className="text-primary"><TextReveal text="Sustainable Solutions." /></span>
+            </h3>
+          </div>
+
+          <div className="bg-slate-50 rounded-3xl p-8 md:p-12 space-y-6 text-lg text-slate-600 leading-relaxed">
+            <p>
+              At <strong className="text-slate-800">Energethics Engineering Solutions Pvt. Ltd.</strong>, we believe that every successful industry is powered by efficient, reliable, and sustainable utility systems. Since our inception in <strong className="text-slate-800">2021</strong>, our mission has been to help industries optimize their operations by delivering world-class engineering solutions backed by technical expertise, trusted global brands, and exceptional customer service.
+            </p>
+            <p>
+              We began our journey with a singular focus—to address the growing demand for reliable and energy-efficient compressed air solutions across industries. To achieve this, we forged strategic alliances with globally renowned brands such as <strong className="text-slate-800">Kaeser Compressors, Shiftair India Pvt. Ltd., Metal Work Pneumatics, Prince Pipes &amp; Fittings,</strong> and <strong className="text-slate-800">Godrej</strong>, enabling us to offer complete compressed air systems, aluminium piping networks, pneumatic automation products, and associated industrial solutions.
+            </p>
+            <p>
+              As we worked closely with our customers, we recognized that their operational challenges extended beyond compressed air. Driven by our commitment to delivering greater value, we expanded our portfolio through strategic partnerships with <strong className="text-slate-800">Thermax Ltd.</strong> and <strong className="text-slate-800">KSB Pumps</strong>. This evolution enabled us to broaden our expertise into steam boilers, water and wastewater treatment systems, industrial pumping solutions, and other critical utility applications, allowing customers to access comprehensive engineering solutions from a single, trusted partner.
+            </p>
+            <p>
+              Today, Energethics Engineering Solutions is proud to be recognized as a provider of <strong className="text-slate-800">integrated industrial utility solutions</strong>, serving manufacturing and process industries with innovative products, engineering excellence, and dependable after-sales support.
+            </p>
+            <p>
+              Since our establishment, we have successfully partnered with more than <strong className="text-primary">140 customers</strong>, building long-term relationships through quality, responsiveness, and a relentless focus on customer satisfaction. Every project we undertake reflects our commitment to delivering solutions that improve operational efficiency, reduce energy consumption, enhance reliability, and maximize the return on our customers' investments.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

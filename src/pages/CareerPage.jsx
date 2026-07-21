@@ -148,7 +148,7 @@ const JobCard = ({ job, index }) => {
 const CareerPage = () => (
   <div className="min-h-screen bg-gray-50">
     {/* Hero */}
-    <div className="bg-gray-900 pt-32 pb-20 px-4">
+    <div className="bg-orange-50 pt-32 pb-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0 }}
@@ -160,15 +160,16 @@ const CareerPage = () => (
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-bold text-white mb-5"
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-slate-800 mb-5"
         >
           Build Your Career at Energethics
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-gray-400 text-lg max-w-2xl mx-auto"
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-slate-500 text-lg max-w-2xl mx-auto"
         >
           We're looking for passionate engineers and professionals to help us deliver world-class industrial energy solutions across India.
         </motion.p>
@@ -177,15 +178,25 @@ const CareerPage = () => (
 
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Why Join Us */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Why Work With Us</h2>
+      <motion.div
+        className="mb-16"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={{ initial: {}, animate: { transition: { staggerChildren: 0.08 } } }}
+      >
+        <motion.h2
+          variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
+          className="text-2xl font-bold text-gray-900 mb-8 text-center"
+        >
+          Why Work With Us
+        </motion.h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {perks.map((p, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.08 }}
+              variants={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
+              whileHover={{ y: -6 }}
               className="bg-white rounded-2xl p-6 shadow-md text-center"
             >
               <div className="text-4xl mb-3">{p.icon}</div>
@@ -194,10 +205,16 @@ const CareerPage = () => (
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* Job Openings */}
-      <div className="mb-16">
+      <motion.div
+        className="mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Current Openings</h2>
         <p className="text-gray-500 mb-8">Click on a role to view details and apply.</p>
         <div className="space-y-4">
@@ -205,18 +222,19 @@ const CareerPage = () => (
             <JobCard key={idx} job={job} index={idx} />
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* CTA */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="bg-gray-900 rounded-2xl p-10 text-center"
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        className="bg-orange-50 rounded-2xl p-10 text-center border border-orange-100"
       >
         <HiMail className="text-5xl text-primary mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-3">Don't see the right role?</h3>
-        <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+        <h3 className="text-2xl font-bold text-slate-800 mb-3">Don't see the right role?</h3>
+        <p className="text-slate-500 mb-6 max-w-xl mx-auto">
           We're always on the lookout for talented individuals. Send us your resume and we'll reach out when a suitable opportunity arises.
         </p>
         <a

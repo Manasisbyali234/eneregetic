@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const logos = [
-  { name: 'ACME Corp', path: '/clients/client1.svg' },
-  { name: 'TechFlow', path: '/clients/client2.svg' },
-  { name: 'GlobalTech', path: '/clients/client3.svg' },
-  { name: 'InnovateCo', path: '/clients/client4.svg' },
-  { name: 'Apex Ltd', path: '/clients/client5.svg' },
-  { name: 'ProSystems', path: '/clients/client6.svg' },
+  { name: 'ACME Corp',    initials: 'AC', color: '#E65C00' },
+  { name: 'TechFlow',     initials: 'TF', color: '#1A73E8' },
+  { name: 'GlobalTech',   initials: 'GT', color: '#0F9D58' },
+  { name: 'InnovateCo',   initials: 'IC', color: '#9C27B0' },
+  { name: 'Apex Ltd',     initials: 'AL', color: '#F4511E' },
+  { name: 'ProSystems',   initials: 'PS', color: '#00897B' },
 ];
 
 const ClientsCarousel = () => {
@@ -47,13 +47,13 @@ const ClientsCarousel = () => {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center mx-8 w-40 h-28 bg-white rounded-lg p-6 shadow-md hover:shadow-xl grayscale hover:grayscale-0 transition-all duration-300"
+              className="flex-shrink-0 flex flex-col items-center justify-center mx-8 w-40 h-28 bg-white rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <img
-                src={logo.path}
-                alt={logo.name}
-                className="max-w-full max-h-full object-contain"
-              />
+              <svg width="44" height="44" viewBox="0 0 44 44" className="mb-2">
+                <rect width="44" height="44" rx="10" fill={logo.color} />
+                <text x="22" y="29" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="Arial, sans-serif">{logo.initials}</text>
+              </svg>
+              <span className="text-gray-700 font-semibold text-center text-xs leading-tight">{logo.name}</span>
             </div>
           ))}
         </motion.div>

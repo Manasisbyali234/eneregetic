@@ -7,7 +7,7 @@ const ConnectWithUs = () => {
   return (
     <motion.section 
       id="connect" 
-      className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-br from-orange-50 via-white to-orange-50 relative overflow-hidden"
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
@@ -18,22 +18,22 @@ const ConnectWithUs = () => {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div variants={fadeInUp} className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             Connect <span className="text-primary">With Us</span>
           </h2>
           <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
         </motion.div>
         
-        <motion.div variants={fadeInUp} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-16">
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+        <motion.div variants={fadeInUp} className="bg-white border border-orange-100 rounded-3xl p-8 md:p-16 shadow-lg">
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
             Discover how our engineering expertise can transform your operations and optimize your outcomes.
           </p>
           
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-slate-500 leading-relaxed mb-8">
             We invite you to connect with us for consultation, insights, or strategic collaboration.
           </p>
           
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-12">
+          <p className="text-base md:text-lg text-slate-500 leading-relaxed mb-12">
             Explore the possibilities of a partnership where innovation, reliability, and sustainability intersect.
           </p>
           

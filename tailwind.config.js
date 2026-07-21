@@ -6,8 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#f97316',
-        secondary: '#1f2937',
+        primary: '#F97316',
+        'primary-light': '#FB923C',
+        secondary: '#0F1C2E',
+        'secondary-light': '#1E3A5F',
+        accent: '#F5A623',
+      },
+      fontFamily: {
+        sans: ['Manrope', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out',

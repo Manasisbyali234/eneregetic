@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { HiLightningBolt, HiShieldCheck, HiUserGroup, HiMap } from 'react-icons/hi';
+import TextReveal from '../TextReveal';
 
 const Features = () => {
   const [ref, isVisible] = useScrollReveal(0.1);
@@ -43,7 +44,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Why Choose Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4"><TextReveal text="Why Choose Us" /></h2>
           <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
         </motion.div>
 

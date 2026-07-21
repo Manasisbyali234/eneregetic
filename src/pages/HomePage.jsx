@@ -13,6 +13,7 @@ import Industries from '../components/sections/Industries';
 import ClientsCarousel from '../components/sections/ClientsCarousel';
 import TeamCulture from '../components/sections/TeamCulture';
 import ConnectWithUs from '../components/sections/ConnectWithUs';
+import OurPromise from '../components/sections/OurPromise';
 
 const HomePage = () => {
   return (
@@ -29,6 +30,7 @@ const HomePage = () => {
       <Products />
       <Benefits />
       <Partnerships />
+      <OurPromise />
       <ConnectWithUs />
       <Industries />
     </>

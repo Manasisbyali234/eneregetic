@@ -21,10 +21,10 @@ const CompressedAirPage = () => {
               alt="Compressed Air Solutions" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/50 to-transparent flex items-center">
               <div className="pl-6 md:pl-16">
                 <h1 className="text-3xl md:text-6xl font-bold text-white mb-4">Compressed Air Solutions</h1>
-                <p className="text-lg md:text-xl text-gray-200 max-w-xl">Advanced Compressed Air Systems for Industrial Excellence</p>
+                <p className="text-lg md:text-xl text-orange-100 max-w-xl">Advanced Compressed Air Systems for Industrial Excellence</p>
               </div>
             </div>
           </div>

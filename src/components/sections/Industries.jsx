@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '../../utils/animations';
 
 const Industries = () => {
   const industries = [
@@ -13,28 +15,47 @@ const Industries = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <motion.section
+      className="py-12 md:py-16 bg-gray-50"
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <motion.div variants={fadeInUp} className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-4"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Providing specialized engineering solutions across diverse industrial sectors
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <motion.div variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {industries.map((industry, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <img src={industry.image} alt={industry.name} className="w-full h-40 object-cover" />
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="overflow-hidden">
+                <motion.img
+                  src={industry.image}
+                  alt={industry.name}
+                  className="w-full h-40 object-cover"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ duration: 0.4 }}
+                />
+              </div>
               <div className="p-4 text-center">
                 <h3 className="text-sm font-semibold text-gray-900">{industry.name}</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
